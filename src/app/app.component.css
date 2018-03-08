@@ -1,0 +1,19 @@
+.container{
+    background-color: white;
+    width: 50%;
+    height: 900px;
+}
+body  {
+    background-image: url("../images/bg.jpg");
+    background-color: #cccccc;
+}
+.checkboxes1{
+     text-align: center;
+}
+.checkboxes1 input{
+      margin: 0px 0px 0px 0px;
+}
+.checkboxes1 label{
+      margin: 0px 150px 0px 100px;
+      text-align: center;
+}
