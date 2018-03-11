@@ -1,40 +1,252 @@
-
-  <div class="container">        
-      <img src="https://s13.postimg.org/zdsw98a3r/logo.png"><br>     <br>
-              <img src="https://s13.postimg.org/4v33okifr/form_field_form_textu.png"><br><br>
-  <form>
-    <input type="text" placeholder=" Full Name" size="50" style="font-family: Arial; font-size:20px; height:25px;"><br>
-    <input type="tel" placeholder=" Mobile Number" size="50" style="font-family: Arial; font-size:20px; height:25px;"><br>
-    <input type="email" placeholder=" Email" size="50" style="font-family: Arial; font-size:20px; height:25px;"><br>
-<div class="checkboxes1">
-    <label><b>I am interested in:</b></label><BR>
-    <label><input type="checkbox" style="width:20px; height:20px;">  STUDIO  </label>
-    <label><input type="checkbox" style="width:20px; height:20px;"> ONE BEDROOM </label><br><br>
-    <label><input type="checkbox" style="width:20px; height:20px;"> TWO BEDROOM </label>
-    <label><input type="checkbox" style="width:20px; height:20px;"> RETAIL </label><br><br>
+<!-- <app-hero-form></app-hero-form> -->
+<div class="row">
+    <div id="bgLogo" class="col-sm-12">
+        <a>
+            <img src="https://s13.postimg.org/zdsw98a3r/logo.png">
+        </a>
+    </div>
 </div>
+<br>
+<div class="container">
+    <br>
+    <div class="row">
+        <div id="bgLogo2" class="col-sm-12">
+            <a>
+                <img src="https://s13.postimg.org/4v33okifr/form_field_form_textu.png">
+            </a>
+        </div>
+    </div>
+    <br>
+    <!-- <img  class="img-responsive center-block" src="https://s13.postimg.org/4v33okifr/form_field_form_textu.png">
+    <br>
+    <br> -->
+    <!-- <img src="../images/formfieldtext.png">
+    <br>
+    <br>
+    <img src="../images/logo.png">
+    <br>
+    <br>call
 
-    My Budget is: <br>
-    <label><input type="checkbox" style="width:20px; height:20px;"> AED 400,000 TO AED 700,000 </label>
-    <label><input type="checkbox" style="width:20px; height:20px;"> AED 700,000 to AED 1,000,000</label><br>
-    <label><input type="checkbox" style="width:20px; height:20px;"> AED 1,000,000 TO AED 1,250,000 </label>
-    <label><input type="checkbox" style="width:20px; height:20px;"> AED 1,250,000 TO AED 1,500,000+ </label><BR><BR>
-    
+    <div ng-init="myVar = '../images/formfieldtext.png'">
+        <h1>Angular</h1>
+        <img src="{{myVar}}">
+    </div> -->
 
-I am Looking to Purchase an Apartment within: <BR>
-    <label><input type="checkbox" style="width:20px; height:20px;"> Immediately </label>
-    <label><input type="checkbox" style="width:20px; height:20px;"> 3 TO 6 MONTHS </label><BR>
-    <label><input type="checkbox" style="width:20px; height:20px;"> 6 TO 12 MONTHS </label>
-    <label><input type="checkbox" style="width:20px; height:20px;"> 12 TO 18 MONTHS </label>
-<BR><BR>
+    <form data-toggle="validator" role="form">
 
-    Locations: <BR>
-    <label><input type="checkbox" style="width:20px; height:20px;"> BUSINESS BAY DUBAI </label>
-    <label><input type="checkbox" style="width:20px; height:20px;"> DUBAI SILICON OASIS </label>
+        <div class="form-group">
+            <!-- <label for="inputsm">Small input</label> -->
+            <input class="form-control input-sm" id="inputsm" type="text" placeholder=" Full Name" [(ngModel)]="fstNme" name="fstName"
+                size="75" style="font-family: Arial; font-size:20px; height:40px;" value="{{fstNme}}" required>
+        </div>
 
-<BR><br>
-    <label>Remarks: <textarea rows="4" cols="50"></textarea></label><br><br>
-    <input type="submit" value="SUBMIT" style="font-size:small; width:300px; height:50px; background-color:orangered">
-    <button type="button" class="btn btn-success">Success</button>
- </form>
- </div>
+        <div class="form-group">
+            <!-- <label for="inputsm">Small input</label> -->
+            <input class="form-control input-sm" id="inputsm" type="tel" placeholder=" Mobile Number" [(ngModel)]="mob" name="mobile"
+                size="75" style="font-family: Arial; font-size:20px; height:40px;" value="{{mob}}" required>
+        </div>
+
+        <div class="form-group">
+            <!-- <label for="inputsm">Small input</label> -->
+            <input class="form-control input-sm" id="inputsm" type="email" placeholder=" Email" [(ngModel)]="email" name="emailname"
+                size="75" style="font-family: Arial; font-size:20px; height:40px;" required>
+        </div>
+
+
+
+        <!-- <div class="row">
+            <div id="bgFullName" class="col-sm-12"> <a>
+                <input type="text" placeholder=" Full Name" 
+                [(ngModel)] = "fstNme" name="fstName"
+                size="75" style="font-family: Arial; font-size:20px; height:40px;" 
+                   value="{{fstNme}}" required></a>
+                
+            </div>
+        </div> -->
+        <!-- <div class="row">
+            <div id="bgMobNum" class="col-sm-12"> <a>
+                <input type="tel" placeholder=" Mobile Number" 
+                [(ngModel)] = "mob" name="mobile"
+                size="75" style="font-family: Arial; font-size:20px; height:40px;" value="{{mob}}"
+                    required></a>
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="bgEmail" class="col-sm-12"><a>
+                <input type="email" placeholder=" Email" 
+                     [(ngModel)] = "email" name="emailname"                
+                       size="75" style="font-family: Arial; font-size:20px; height:40px;" required></a>
+                
+            </div>
+        </div> -->
+
+
+        <div id="aprtSize">
+            <a>
+                <label>
+                    <b> I am interested in: </b>
+                </label>
+            </a>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" [(ngModel)]="studio" name="studioname" required> STUDIO </label>
+
+            </div>
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" [(ngModel)]="oneBed" name="oneBedname" required> ONE BEDROOM </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" [(ngModel)]="twoBed" name="twoBedname" required> TWO BEDROOM </label>
+
+            </div>
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" [(ngModel)]="retail" name="retailname" required> RETAIL </label>
+            </div>
+        </div>
+
+
+        <label>
+            <b>My Budget is: </b>
+        </label>
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" [(ngModel)]="budget400K700K" name="budget400K700Kname" required> AED 400,000 TO AED 700,000 </label>
+
+            </div>
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" [(ngModel)]="budget700K1000K" name="budget700K1000Kname" required> AED 700,000 to AED 1,000,000</label>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" [(ngModel)]="budget1000K1250K" name="budget1000K1250Kname" required> AED 1,000,000 TO AED 1,250,000 </label>
+
+            </div>
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" [(ngModel)]="budget1250K1500K" name="budget1250K1500Kname" required> AED 1,250,000 TO AED 1,500,000+ </label>
+                <BR>
+                
+            </div>
+        </div>
+
+        <label>
+            <b>I am Looking to Purchase an Apartment within:</b>
+        </label>
+
+        <BR>
+
+        <!-- <div class="row">
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" required> AED 400,000 TO AED 700,000 </label>
+
+            </div>
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;"required> AED 700,000 to AED 1,000,000</label>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" required> AED 1,000,000 TO AED 1,250,000 </label>
+
+            </div>
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" required> AED 1,250,000 TO AED 1,500,000+ </label>
+                <BR>
+                <BR>
+            </div>
+        </div> -->
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" [(ngModel)]="immed" name="immedname" required> Immediately </label>
+
+            </div>
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" [(ngModel)]="months3to6" name="months3to6name" required> 3 TO 6 MONTHS </label>
+                <BR>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" [(ngModel)]="months6to12" name="months6to12name" required> 6 TO 12 MONTHS </label>
+
+            </div>
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" [(ngModel)]="months12to18" name="months12to18name" required> 12 TO 18 MONTHS </label>
+                <BR>
+                
+            </div>
+        </div>
+        <label>
+            <b>Locations: </b>
+        </label>
+        <br>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" [(ngModel)]="locBusiness" name="locationBusiness" required> BUSINESS BAY DUBAI </label>
+
+            </div>
+            <div class="col-sm-6">
+                <label>
+                    <input type="checkbox" style="width:20px; height:20px;" [(ngModel)]="locSilicon" name="locationSilicon" required> DUBAI SILICON OASIS </label>
+            </div>
+        </div>
+        <BR>
+        <br>
+
+
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="comment">Remarks:</label>
+                    <textarea class="form-control" rows="5" cols="70" id="comment" [(ngModel)]="rmks" name="rmkname" required></textarea>
+                </div>
+            </div>
+
+            <!-- <div class="col-sm-1">
+                <label style="font-family:Arial">Remarks:
+                </label>
+
+            </div>
+
+            <div class="col-sm-11">
+                <label>
+                    <textarea rows="4" cols="70" [(ngModel)]="rmks" name="rmkname"></textarea>
+                </label>
+
+            </div> -->
+        </div>
+
+        <input type="submit" value="SUBMIT" (click)='SaveEF()' style="font-size:small; width:300px; height:50px; background-color:orangered">
+        <!-- <button type="button" class="btn btn-success">Success</button> -->
+    </form>
+</div>

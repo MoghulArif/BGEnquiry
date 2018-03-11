@@ -1,13 +1,49 @@
 .container{
     background-color: white;
-    width: 50%;
-    height: 900px;
+    width: 60%;
+    height: auto;
 }
-body  {
+
+#bgLogo a img {
+    display:block;
+    margin:auto;
+    /* opacity: ; */
+
+} 
+
+#bgLogo2 a img {
+    display:block;
+    margin:auto;
+
+}
+/* 
+#bgFullName a input{
+    display:block;
+    margin:auto;
+}
+
+#bgMobNum a input{
+    display:block;
+    margin:auto;
+}
+
+#bgEmail a input{
+    display:block;
+    margin:auto;
+}
+
+#aprtSize a label{
+    display:block;
+    margin:auto;
+} */
+
+
+
+/* body  {
     background-image: url("../images/bg.jpg");
     background-color: #cccccc;
-}
-.checkboxes1{
+} */
+/* .checkboxes1{
      text-align: center;
 }
 .checkboxes1 input{
@@ -16,4 +52,4 @@ body  {
 .checkboxes1 label{
       margin: 0px 150px 0px 100px;
       text-align: center;
-}
+} */
