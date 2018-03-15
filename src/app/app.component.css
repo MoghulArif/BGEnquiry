@@ -4,18 +4,25 @@
     height: auto;
 }
 
-#bgLogo a img {
+  #bgLogo a img {
     display:block;
     margin:auto;
     /* opacity: ; */
 
-} 
+}  
 
-#bgLogo2 a img {
+ #bgLogo2 a img {
     display:block;
     margin:auto;
+    width:auto;
 
+}  
+
+#btnSubmit input{
+    display:block;
+    margin:auto;
 }
+
 /* 
 #bgFullName a input{
     display:block;

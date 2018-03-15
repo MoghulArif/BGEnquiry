@@ -17,7 +17,8 @@ export class orderService{
     private count : number = 0;
 
     url: string = "http://jsonplaceholder.typicode.com/users";
-    bgUrl : string = "http://localhost:3000/api/";
+     bgUrl : string = "http://localhost:3000/api/";
+    // bgUrl : string = "http://localhost:91/api/";
 
     constructor(private http: Http){}
 

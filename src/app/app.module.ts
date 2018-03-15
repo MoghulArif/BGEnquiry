@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { orderService } from './services/order.service';
 import {HttpModule} from '@angular/http';
-import { HeroFormComponent } from './hero-form/hero-form.component';
+// import { HeroFormComponent } from './hero-form/hero-form.component';
 // import { read } from 'fs'; we need routing 
 
 

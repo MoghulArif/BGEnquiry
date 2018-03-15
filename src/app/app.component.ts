@@ -9,6 +9,7 @@ import { Alert } from 'selenium-webdriver';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  // buttonColor: string = "#000";
   title : string;
   fstNme : string;
   mob : string;
@@ -46,7 +47,28 @@ export class AppComponent {
   }
 
   SaveEF() {
+
+    // this.buttonColor = 'orangered';s
+    //check for validations 
+    // if(this.fstNme == '' || this.mob == '' || this.rmks == '' || this.email == '' ){
+      if(this.fstNme == null || this.fstNme == ''){
+        alert('Please enter your Full Name');
+      } else if( this.mob == null || this.mob == ''){
+        alert('Mobile Number is required ');
+      } else if(this.email == null || this.email == ''){
+        alert('Please enter the Email Address');
+      }  else if(this.rmks == null || this.rmks == ''){
+        alert('Please enter few remarks ');
+      } else if((this.locBusiness == null || this.locBusiness == false )  &&
+                (this.locSilicon == null || this.locSilicon == false)){
+        alert('Please select atleast one location');
+      }
+      
+      
+      else {
+
     this.ordsvc.saveBGEnquiry(
+      
         this.fstNme,
         this.mob,
         this.rmks,
@@ -71,14 +93,14 @@ export class AppComponent {
           (saveRep) => {
             
             console.log(saveRep);
-            
-            
-            alert(this.fstNme + " ,Your Enquiry Form has been saved successfully and Your ID is: " + saveRep ); 
+                        
+            alert( "Dear " + this.fstNme + ", Your Enquiry Form has been saved successfully and Your Reference Number is: " 
+                          + saveRep ); 
           this.fstNme = '';
           this.mob = '',
         this.rmks = '',
         this.email = '',
-        this.locBusiness = false;
+        this.locBusiness = false,
         this.locSilicon = false,
         this.budget400K700K = false,
         this.budget700K1000K = false,
@@ -96,4 +118,5 @@ export class AppComponent {
         },
           (err) => { console.log(err) });
   }
+}
 }
