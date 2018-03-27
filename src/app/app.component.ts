@@ -46,6 +46,19 @@ export class AppComponent {
     
   }
 
+  testWebAPI() {
+     
+    this.ordsvc.getWebAPItest().subscribe(
+      (data)=>{
+        console.log(data);
+      },
+      (err)=>{
+        console.log(err);
+      }
+    );
+
+  }
+
   SaveEF() {
 
     // this.buttonColor = 'orangered';s
@@ -56,16 +69,28 @@ export class AppComponent {
       } else if( this.mob == null || this.mob == ''){
         alert('Mobile Number is required ');
       } else if(this.email == null || this.email == ''){
-        alert('Please enter the Email Address');
-      }  else if(this.rmks == null || this.rmks == ''){
-        alert('Please enter few remarks ');
+        alert('Please enter your Email Address');
+      }  else if((this.studio == null || this.studio == false )  &&
+                 (this.oneBed == null || this.oneBed == false)   &&
+                 (this.twoBed == null || this.twoBed == false)   &&
+                 (this.retail == null || this.retail == false) ){
+        alert('Which flat are you interested in?');
+      } else if((this.budget400K700K == null || this.budget400K700K == false )  &&
+                (this.budget700K1000K == null || this.budget700K1000K == false) &&
+                (this.budget1000K1250K == null || this.budget1000K1250K == false) &&
+                (this.budget1250K1500K == null || this.budget1250K1500K == false) ){
+        alert('Please enter your Budget');
+      }else if((this.immed == null || this.immed == false )  &&
+                (this.months3to6 == null || this.months3to6 == false) &&
+                (this.months6to12 == null || this.months6to12 == false) &&
+                (this.months12to18 == null || this.months12to18 == false) ){
+        alert('Please enter the duration?');
       } else if((this.locBusiness == null || this.locBusiness == false )  &&
                 (this.locSilicon == null || this.locSilicon == false)){
         alert('Please select atleast one location');
-      }
-      
-      
-      else {
+      } else if(this.rmks == null || this.rmks == ''){
+        alert('Please enter few Remarks ');
+      } else {
 
     this.ordsvc.saveBGEnquiry(
       
@@ -94,8 +119,7 @@ export class AppComponent {
             
             console.log(saveRep);
                         
-            alert( "Dear " + this.fstNme + ", Your Enquiry Form has been saved successfully and Your Reference Number is: " 
-                          + saveRep ); 
+            alert( "Dear " + this.fstNme + ", Your Enquiry Form has been saved successfully! " + saveRep ); 
           this.fstNme = '';
           this.mob = '',
         this.rmks = '',

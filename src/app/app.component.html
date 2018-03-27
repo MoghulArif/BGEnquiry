@@ -9,14 +9,14 @@
 </div>
 <br>
 <div class="container">
-    <br>    
+    <br>
     <div class="row">
-        <div id="bgLogo2" class="col-sm-12"> 
+        <div id="bgLogo2" class="col-sm-12">
             <a>
                 <!-- <img src="https://s13.postimg.org/4v33okifr/form_field_form_textu.png"> -->
                 <img class="img-responsive" src="assets/formfieldtext.png">
             </a>
-         </div>
+        </div>
     </div>
     <br>
     <!-- <img  class="img-responsive center-block" src="https://s13.postimg.org/4v33okifr/form_field_form_textu.png">
@@ -247,14 +247,17 @@
             </div> -->
         </div>
         <div class="row" id="btnSubmit">
-            
-                <input type="submit" value="SUBMIT" (click)='SaveEF()' 
-                    style="font-size:small; width:300px; height:50px; background-color:orangered;"> 
-                
-                    <!-- [ngStyle]="{'background-color':buttonColor}" -->
-                        
-            
+
+            <input type="submit" value="SUBMIT" (click)='SaveEF()' style="font-size:small; width:300px; height:50px; background-color:orangered;">
+
+            <!-- [ngStyle]="{'background-color':buttonColor}" -->
+
+
         </div>
-                <!-- <button type="button" class="btn btn-success">Success</button> -->
+        <!-- <button type="button" class="btn btn-success">Success</button> -->
     </form>
+    <div style="visibility:hidden">
+        <button type="button" (click)='testWebAPI()'>Success</button>
     </div>
+
+</div>

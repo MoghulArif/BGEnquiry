@@ -17,8 +17,10 @@ export class orderService{
     private count : number = 0;
 
     url: string = "http://jsonplaceholder.typicode.com/users";
-     bgUrl : string = "http://localhost:3000/api/";
-    // bgUrl : string = "http://localhost:91/api/";
+    //  bgUrl : string = "http://localhost:3000/api/";
+    //  bgUrl : string = "http://localhost:8085/api/";
+    bgUrl : string = "http://localhost:92/api/";
+
 
     constructor(private http: Http){}
 
@@ -43,6 +45,15 @@ export class orderService{
                     return resp.json()
                 });
        
+    }
+
+    getWebAPItest(){
+        return this.http.get(this.bgUrl + '/home')        
+        .map((resp) => {
+            console.log(resp.json());
+            return resp.json()
+        });
+
     }
 
     saveBGEnquiry(fname, mob, rmks, email, 
